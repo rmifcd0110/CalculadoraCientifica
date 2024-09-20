@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Calculadora Científica</h1>
+    </header>
+
+    <!-- Contenedo principal -->
+     <div id="calculadora">
+        <!-- Pantalla de la calculadora -->
+         <input type="text" id="display" disabled><!--disabled: bloquea para no poder introducir datos
+
+         <!-- Contendor de los botones, dispuestos en una cuadrícula -->
+          <div class="button-grid">
+            <!-- Botones númericos y operadores -->
+             <button class="calc-button" onclick="appendCharacter('7')">7</button>
+             <button class="calc-button" onclick="appendCharacter('8')">8</button>
+             <button class="calc-button" onclick="appendCharacter('9')">9</button>
+             <!-- Botón para la división -->
+             <button class="calc-button operador" onclick="appendCharacter('/')">/</button>
+
+             <!-- Botones númericos y multiplicación -->
+             <button class="calc-button" onclick="appendCharacter('4')">4</button>
+             <button class="calc-button" onclick="appendCharacter('5')">5</button>
+             <button class="calc-button" onclick="appendCharacter('6')">6</button>
+             <!-- Botón para la multiplicación -->
+             <button class="calc-button operador" onclick="appendCharacter('*')">*</button>
+
+             <!-- Botones númericos y resta -->
+             <button class="calc-button" onclick="appendCharacter('1')">1</button>
+             <button class="calc-button" onclick="appendCharacter('2')">2</button>
+             <button class="calc-button" onclick="appendCharacter('3')">3</button>
+             <!-- Botón para la resta -->
+             <button class="calc-button operador" onclick="appendCharacter('-')">-</button>
+
+            <!-- Botones punto decimal , cero , botón borrar y suma -->
+            <button class="calc-button" onclick="appendCharacter('0')">0</button>
+            <button class="calc-button" onclick="appendCharacter('.')">.</button>
+            <!-- Bottón para borrar pantalla -->
+            <button class="calc-button clear" onclick="clearDisplay()">C</button>
+            <!-- Botón para la suma -->
+            <button class="calc-button operador" onclick="appendCharacter('+')">+</button>
+
+            <!-- Botones para operaciones especiales -->
+            <!-- Botón para borrar el último carácter -->
+            <button class="calc-button" onclick="deleteLast()">&#9003;</button>
+            <!-- Botón para potencia -->
+            <button class="calc-button operador" onclick="appendCharacter('^')">^</button>
+
+            <!-- Botón para la raíz cuadrada -->
+            <button class="calc-button operador" onclick="calculateAdvanced(sqrt)">&#8730;</button>
+
+            <!-- Botón para calcular el resultado -->
+            <button class="calc-button igual" onclick="calcular()">=</button>
+
+
+          </div>
+
+
+     </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
